@@ -36,8 +36,6 @@ const escapedStringRegExp = /^'([^]*?)'?$/;
 const doubleQuoteRegExp = /''/g;
 const unescapedLatinCharacterRegExp = /[a-zA-Z]/;
 
-export { format as formatDate };
-
 /**
  * The {@link format} function options.
  */
@@ -429,6 +427,8 @@ function cleanEscapedString(input) {
 
   return matched[1].replace(doubleQuoteRegExp, "'");
 }
+
+export { format as formatDate };
 
 // Fallback for modularized imports:
 export default format;
